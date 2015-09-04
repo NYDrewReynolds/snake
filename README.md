@@ -1,20 +1,3 @@
-# Game Time Starter Kit
+#Snake
 
-To install the dependencies:
-
-```
-npm install
-```
-
-To fire up a development server:
-
-```
-npm run server
-```
-
-
-To build the static files:
-
-```js
-npm run build
-```
+###[ProjectSpec](https://github.com/turingschool/lesson_plans/blob/master/ruby_04-apis_and_scalability/gametime_project.markdown)
