@@ -5,9 +5,8 @@ require('./eat-food.js');
 require('./game-mode.js');
 require('./create-board.js');
 require('./game-over.js');
+var $ = require('jquery');
 
-describe('our test bundle', function () {
-  it('should work', function () {
-    assert(true);
-  });
-});
+$('#canvas').hide();
+$('h1').hide();
+$('h3').hide();

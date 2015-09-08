@@ -1,11 +1,18 @@
+const chai = require('chai');
+const assert = chai.assert;
+var $ = require('jquery');
+var Game = require('../lib/game.js');
+
 describe('Game mode', function () {
-  xit("starts as 'normal'", function () {
-    assert(true);
+  it("starts as 'normal'", function () {
+    var game = new Game();
+    assert.equal(game.mode, 'normal');
   });
 
-  xit("can be changed to 'warp'", function () {
-    expect(mode).to.equal('normal');
-    // Press W
-    expect(mode).to.equal('warp');
+  it("can be changed to 'warp'", function () {
+    var game = new Game();
+    assert.equal(game.mode, 'normal');
+    game.mode = 'warp'
+    assert.equal(game.mode, 'warp');
   });
 });
