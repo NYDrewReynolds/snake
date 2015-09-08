@@ -1,14 +1,22 @@
+const chai = require('chai');
+const assert = chai.assert;
+var $ = require('jquery');
+var Board = require('../lib/board.js');
+
 describe('Creating new board', function () {
-  xit('has a set height', function () {
-    expect(board.height).to.equal(460)
+
+  it('has a set height', function () {
+    var board = new Board();
+    assert.equal(board.height, 460)
   });
 
-  xit('has a set width', function () {
-    expect(board.width).to.equal(800)
+  it('has a set width', function () {
+    var board = new Board();
+    assert.equal(board.width, 800)
   });
 
-  xit('has a black background', function () {
-    // board.fillCanvas();
-    expect(board.fillStyle).to.equal('black')
+  it('has a black background', function () {
+    var board = new Board();
+    assert.equal(board.ctx.strokeStyle, '#000000')
   });
 });

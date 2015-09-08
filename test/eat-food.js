@@ -1,22 +1,22 @@
-describe('Eating food', function () {
-  xit('makes snake longer', function () {
-    expect(snake.bodyArray.length).to.equal(5)
-    // new Food
-    // snake.determineCell() to = food x,y
-    expect(snake.bodyArray.length).to.equal(6)
+const chai = require('chai');
+const assert = chai.assert;
+var $ = require('jquery');
+var Board = require('../lib/board.js');
+var Food = require('../lib/food.js');
+
+describe('Food', function () {
+  it('can be created', function () {
+    var board = new Board();
+    var food = new Food(board);
+    assert(food);
   });
 
-  xit('updates score', function () {
-    expect(score).to.equal(0)
-    // new Food
-    // snake.determineCell() to = food x,y
-    expect(score).to.equal(10)
+  it('is in a random location', function () {
+    var board = new Board();
+    var foodOne = new Food(board);
+    var foodTwo = new Food(board);
+    assert.notEqual(foodOne.x, foodTwo.x)
+    assert.notEqual(foodOne.y, foodTwo.y)
   });
 
-  xit('updates level', function () {
-    expect(level).to.equal(1)
-    // new Food
-    // snake.determineCell() to = food x,y
-    expect(level).to.equal(2)
-  });
 });
