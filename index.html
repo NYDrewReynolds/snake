@@ -2,14 +2,54 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <link href='https://fonts.googleapis.com/css?family=Chango' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
   <title>Snake</title>
 </head>
 <body>
-    <h1>Snake!</h1><h3>Press 'w' for Warp mode!</h5>
-  <canvas id="canvas" width="800" height="460" style="border:1px solid #000000;">
-  </canvas>
-  <h1 id="score">Score: 0</h1>
-  <h1 id="level">Level: 1</h1>
-  <script src="main.bundle.js"></script>
-</body>
-</html>
+  <div class='container'>
+    <div id='title'>
+      <h1>Snake!</h1>
+    </div>
+    <div class='row'>
+      <div class='col-md-9'>
+        <canvas id="canvas" width="800" height="460" style="border:1px solid #000000;">
+        </canvas>
+      </div>
+      <div class='col-md-3'>
+        <h3 id='title'>Controls</h3>
+        <table class='table table-condensed'>
+          <tr class='active'>
+            <td></td>
+            <td>Up</td>
+            <td></td>
+          </tr>
+          <tr class='active'>
+            <td></td>
+            <td><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></td>
+            <td></td>
+          </tr>
+          <tr class='active'>
+            <td><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></td>
+            <td><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span></td>
+            <td><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></td>
+          </tr>
+          <tr class='active'>
+            <td>Left</td>
+            <td>Down</td>
+            <td>Right</td>
+          </tr>
+        </table>
+        <h5>Press 'w' for Warp mode!</h5>
+        <h1 id="score">Score: 0</h1>
+        <h1 id="level">Level: 1</h1>
+      </div>
+    </div>
+
+  </body>
+  <footer>
+    <script src="main.bundle.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </footer>
+  </html>
