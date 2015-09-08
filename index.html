@@ -1,60 +1,89 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <link href='https://fonts.googleapis.com/css?family=Chango' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <title>Snake</title>
-</head>
-<body>
-  <div class='container'>
-    <div id='title'>
-      <h1><span class='disco'><font color='red'>D</font>
-        <font color='green'>I</font>
-        <font color='blue'>S</font>
-        <font color='indigo'>C</font>
-        <font color='violet'>O</font></span>
-         Snake!</h1>
-      </div>
-      <div class='row'>
-        <div class='col-md-9'>
-          <canvas id="canvas" width="800" height="460" style="border:1px solid #000000;">
-          </canvas>
-        </div>
-        <div class='col-md-3'>
-          <h3 id='title'>Snake Controls</h3>
-          <table class='table table-condensed'>
-            <tr class='active'>
-              <td></td>
-              <td>Up</td>
-              <td></td>
-            </tr>
-            <tr class='active'>
-              <td></td>
-              <td><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></td>
-              <td></td>
-            </tr>
-            <tr class='active'>
-              <td><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></td>
-              <td><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span></td>
-              <td><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></td>
-            </tr>
-            <tr class='active'>
-              <td>Left</td>
-              <td>Down</td>
-              <td>Right</td>
-            </tr>
-          </table>
-          <h5>Press 'w' for Warp mode!</h5>
-          <h2 id="score">Score: 0</h2>
-          <h2 id="level">Level: 1</h2>
-        </div>
-      </div>
-
+    <head>
+        <meta charset="utf-8">
+        <link href='https://fonts.googleapis.com/css?family=Chango' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Snake</title>
+    </head>
+    <body>
+        <div class='container'>
+            <div class="overlay hidden">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3" style="margin-top: 150px">
+                        <div class="jumbotron">
+                            <h1 id="popupText"></h1>
+                            <p id="scoreInfo"></p>
+                            <p class="text-center"><a class="btn btn-success btn-lg" id="startButton" role="button">Start</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id='title'>
+                <h1><span class='disco'><font color='red'>D</font>
+                    <font color='green'>I</font>
+                    <font color='blue'>S</font>
+                    <font color='indigo'>C</font>
+                    <font color='violet'>O</font></span>
+                    Snake!</h1>
+            </div>
+            <div class='row'>
+                <div class='col-md-9'>
+                    <canvas id="canvas" width="800" height="460" style="border:1px solid #000000;">
+                    </canvas>
+                </div>
+                <div class='col-md-3'>
+                    <h3 id='title'>Snake Controls</h3>
+                    <table class='table table-condensed'>
+                        <tr class='active'>
+                            <td></td>
+                            <td>Up</td>
+                            <td></td>
+                        </tr>
+                        <tr class='active'>
+                            <td></td>
+                            <td><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></td>
+                            <td></td>
+                        </tr>
+                        <tr class='active'>
+                            <td><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></td>
+                            <td><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span></td>
+                            <td><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></td>
+                        </tr>
+                        <tr class='active'>
+                            <td>Left</td>
+                            <td>Down</td>
+                            <td>Right</td>
+                        </tr>
+                    </table>
+                    <h5>Press 'w' for Warp mode!</h5>
+                    <h2 id="score">Score: 0</h2>
+                    <h2 id="level">Level: 1</h2>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </body>
     <footer>
-      <script src="main.bundle.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="main.bundle.js"></script>
+        <script src='https://code.jquery.com/jquery-2.1.4.min.js'></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     </footer>
-    </html>
+</html>
