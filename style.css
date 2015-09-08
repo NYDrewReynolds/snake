@@ -8,6 +8,11 @@ h1 {
   font-size: 4em;
 }
 
+.disco {
+  text-align: center;
+  letter-spacing: -13px;
+}
+
 h2 {
   font-size: 3em;
 }
